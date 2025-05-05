@@ -1,0 +1,5 @@
+numeros = [11, 23, 35, 47, 59]
+soma = sum(numeros)
+media = soma / len(numeros)
+
+print("A média dos números é:", media)
