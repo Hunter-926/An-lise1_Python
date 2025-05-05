@@ -1,0 +1,25 @@
+dicionario = {"Wesley": 9.5, "Isabel": 8.0, "Anderson": 7.2}
+
+entrada = input('Informe um novo aluno e sua nota (Ex: Lucas: 7.5): ')
+
+nome, nota = entrada.split(":")
+nome = nome.strip()
+nota = float(nota.strip())
+
+dicionario[nome] = nota
+print(dicionario)
+
+#Divide a entrada em duas partes:
+# A função split(":") separa a string onde encontrar dois pontos:
+# "Lucas" → vai para a variável nome
+# " 7.5" → vai para a variável nota
+
+#Remove espaços em branco extras do nome:
+# nome = nome.strip()
+# Se o usuário digitar com espaços extras, como " Lucas ", o .strip() remove os espaços antes e depois:
+# " Lucas " → "Lucas"
+
+# Remove espaços da nota e converte para número:
+# nota = float(nota.strip())
+# Primeiro, nota.strip() transforma " 7.5" em "7.5".
+# Depois, float("7.5") transforma a string em número de ponto flutuante: 7.5.
