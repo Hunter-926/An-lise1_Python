@@ -1,0 +1,5 @@
+palavras = ["arroz", "feijão", "ovo", "macarrão", "carne"]
+e = input('Informe um alimento: ')
+
+palavras.append(e)
+print(palavras)
