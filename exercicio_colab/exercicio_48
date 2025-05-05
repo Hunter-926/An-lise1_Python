@@ -1,0 +1,9 @@
+dicionario = {"Wesley": 9.5, "Isabel": 8.0, "Anderson": 7.2}
+
+for nome, nota in dicionario.items():
+    print(f"{nome} → {nota}")
+
+aluno = input("Digite o nome do aluno que deseja remover: ")
+dicionario.pop(aluno, None)
+
+print(dicionario)
