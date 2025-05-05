@@ -1,0 +1,7 @@
+nomes = ['wesley', 'isabel', 'anderson', 'débora']
+maiusculo = [palavra.upper() for palavra in nomes]
+print(maiusculo)
+
+# Essa linha de código está utilizando uma compreensão de lista
+#(list comprehension) para converter todas as palavras em uma lista nomes
+#para maiúsculas e armazená-las na lista maiúsculo
