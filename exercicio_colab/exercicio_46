@@ -1,0 +1,4 @@
+alunos = {"Wesley": 9.5, "Isabel": 8.0, "Anderson": 7.2}
+
+nota = alunos["Wesley"]
+print(f"A nota do Wesley é: {nota}")
