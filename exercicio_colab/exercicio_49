@@ -1,0 +1,7 @@
+dicionario = {"Wesley": 9.5, "Isabel": 8.0, "Anderson": 7.2}
+
+for nome, nota in dicionario.items():
+    print(f"{nome} → {nota}")
+
+# for nome, nota in dicionario.items():
+# dicionario.items() retorna todos os pares chave-valor do dicionário.
