@@ -5,28 +5,28 @@ class ContaCorrente:
         self.senha = senha
 
     def consultar_saldo(self):
-        print(f"O saldo da conta {self.num_conta}: R$ {self.saldo:.2f}")
+        print(f"O saldo da conta {self.num_conta}: R$ {self.saldo:.2f}\n")
 
     def sacar(self, valor):  
         if 0 < valor <= self.saldo:
             self.saldo -= valor 
-            print(f"O saldo atual da conta: {self.saldo:.2f}")
+            print(f"O saldo atual da conta: {self.saldo:.2f}\n")
         else:
-            print("Saldo insuficiente ou inválido!")
+            print("Saldo insuficiente ou inválido!\n")
 
 
     def depositar(self, valor):
         if valor > 0: 
             self.saldo += valor 
-            print(f"O saldo atual da conta: {self.saldo:.2f}")
+            print(f"O saldo atual da conta: {self.saldo:.2f}\n")
         else:
-            print("Operação inválida.")
+            print("Operação inválida.\n")
 
     def transferir(self, destinatario, valor): 
         if 0 < valor <= self.saldo:
             self.saldo -= valor 
             destinatario.saldo += valor
-            print(f"O saldo atual da conta: {self.saldo:.2f}")
+            print(f"O saldo atual da conta: {self.saldo:.2f}\n")
         else:
-            print("Saldo insuficiente ou inválido!")
+            print("Saldo insuficiente ou inválido!\n")
 
