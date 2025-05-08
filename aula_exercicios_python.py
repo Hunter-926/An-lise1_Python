@@ -243,7 +243,7 @@ print(soma)
 
 Mult = 5
 for x in range(1, 11,):
-  print(f"{Mult} x {x} = {Mult *x}")
+  print(f"{x} x {Mult} = {Mult *x}")
 
 """## Exercício 25: Imprima os 10 primeiros números da sequência de Fibonacci."""
 
@@ -261,51 +261,243 @@ texto = (input('Escreva uma palavra: '))
 for caracter in texto:
   print(caracter)
 
-"""## Exercício 27: Crie um programa que peça um número e imprima sua contagem regressiva até 0.
+"""## Exercício 27: Crie um programa que peça um número e imprima sua contagem regressiva até 0."""
 
-## Exercício 28: Crie um programa que solicite 5 números ao usuário e exiba a soma deles.
+v = int(input('Digite um número: '))
 
-## Exercício 29: Imprima todas as vogais de uma string digitada pelo usuário.
+for v in range(v,-1,-1):
+  print(v)
 
-## Exercício 30: Crie um programa que peça 5 números e exiba apenas os números pares.
+"""## Exercício 28: Crie um programa que solicite 5 números ao usuário e exiba a soma deles."""
 
-## Exercício 31: Percorra uma lista de frutas e imprima cada uma.
+a = int(input('Digite um valor: '))
+b = int(input('Digite outro valor: '))
+c = int(input('Digite outro valor: '))
+d = int(input('Digite outro valor: '))
+e = int(input('Digite outro valor: '))
 
-## Exercício 32: Some todos os números de uma lista.
+ST = a + b + c + d + e
+print(ST)
 
-## Exercício 33: Multiplique cada número de uma lista por 2 e imprima o resultado.
+"""## Exercício 29: Imprima todas as vogais de uma string digitada pelo usuário."""
 
-## Exercício 34: Conte quantas palavras existem em uma lista de palavras.
+palavra = (input("Insira uma palavra: "))
+vogais = ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U']
 
-## Exercício 35: Imprima cada letra de uma palavra separadamente.
+print("Vogais da palavra: ")
+for letra in palavra:
+    if letra in vogais:
+        print(letra)
 
-## Exercício 36: Crie uma lista com 5 números e imprima o maior.
+"""## Exercício 30: Crie um programa que peça 5 números e exiba apenas os números pares."""
 
-## Exercício 37: Crie uma lista e inverta a ordem dos elementos.
+numeros = []
 
-## Exercício 38: Crie uma lista com 5 nomes e remova o último nome.
+for i in range(5):
+    numero = int(input(f"Digite o {i+1}º número: "))
+    if numero % 2 == 0:
+        numeros.append(numero)
 
-## Exercício 39: Ordene uma lista de números.
+print("Números pares digitados:", numeros)
 
-## Exercício 40: Crie uma lista com 5 números e exiba apenas os pares.
+"""## Exercício 31: Percorra uma lista de frutas e imprima cada uma."""
 
-## Exercício 41: Crie uma lista e adicione um novo elemento no final.
+frutas = ['maça', 'banana', 'laranja', 'uva', 'morango']
 
-## Exercício 42: Verifique se um número existe dentro de uma lista.
+for fruta in frutas:
+    print(fruta)
 
-## Exercício 43: Crie uma lista de números e calcule a média.
+"""## Exercício 32: Some todos os números de uma lista."""
 
-## Exercício 44: Crie uma lista de nomes e converta todos para maiúsculas.
+numeros = [19, 21, 37, 45, 59]
+soma = 0
 
-## Exercício 45: Crie uma lista de números e remova os duplicados.
+for numero in numeros:
+    soma += numero
 
-## Exercício 46: Crie um dicionário com nomes de alunos e suas notas e exiba a nota de um aluno específico.
+print("A soma dos números é:", soma)
 
-## Exercício 47: Adicione um novo aluno e sua nota a um dicionário.
+"""## Exercício 33: Multiplique cada número de uma lista por 2 e imprima o resultado."""
 
-## Exercício 48: Remova um aluno do dicionário.
+numeros = [1, 2, 3, 4, 5]
+resultado = []
 
-## Exercício 49: Percorra um dicionário e imprima suas chaves e valores.
+for numero in numeros:
+    resultado.append(numero * 2)
 
-## Exercício 50: Verifique se uma chave existe no dicionário.
-"""
+print("Resultado:", resultado)
+
+"""## Exercício 34: Conte quantas palavras existem em uma lista de palavras."""
+
+palavra = ['arroz', 'feijão', 'ovo', 'frango', 'macarrão']
+resultado = len(palavra)
+
+print("Resultado:", resultado)
+
+"""## Exercício 35: Imprima cada letra de uma palavra separadamente."""
+
+texto = (input('Escreva uma palavra: '))
+
+for caracter in texto:
+  print(caracter)
+
+"""## Exercício 36: Crie uma lista com 5 números e imprima o maior."""
+
+numeros = [10, 20, 30, 40, 50]
+maior = numeros[0]
+
+for numero in numeros:
+    if numero > maior:
+        maior = numero
+
+print("O maior número é:", maior)
+
+"""## Exercício 37: Crie uma lista e inverta a ordem dos elementos."""
+
+numeros = [1, 2, 3, 4, 5]
+numeros.reverse()
+
+print("Lista invertida:", numeros)
+
+"""## Exercício 38: Crie uma lista com 5 nomes e remova o último nome."""
+
+nomes = ['Alice', 'Bob', 'Charlie', 'David', 'Eve']
+nomes.pop()
+
+print("Lista atualizada:", nomes)
+
+"""## Exercício 39: Ordene uma lista de números."""
+
+numeros = [5, 2, 8, 1, 9]
+numeros.sort()
+
+print("Lista ordenada:", numeros)
+
+"""## Exercício 40: Crie uma lista com 5 números e exiba apenas os pares."""
+
+numeros = [1, 2, 3, 4, 5]
+resultado = []
+
+for numero in numeros:
+    if numero % 2 == 0:
+        resultado.append(numero)
+
+print("Números pares:", resultado)
+
+#  O método .append() é utilizado em listas em Python para adicionar um novo item ao final da lista.
+#Ele é uma maneira simples e eficiente de inserir elementos no final de uma lista existente.
+
+"""## Exercício 41: Crie uma lista e adicione um novo elemento no final."""
+
+palavras = ["arroz", "feijão", "ovo", "macarrão", "carne"]
+e = input('Informe um alimento: ')
+
+palavras.append(e)
+print(palavras)
+
+"""## Exercício 42: Verifique se um número existe dentro de uma lista."""
+
+numero = [2, 4, 6, 8, 10, 11, 13, 15, 17, 19]
+i = int(input('Digite um número: '))
+
+if i in numero:
+  print('Existe')
+else:
+  print('Não existe')
+
+"""## Exercício 43: Crie uma lista de números e calcule a média."""
+
+numeros = [11, 23, 35, 47, 59]
+soma = sum(numeros)
+media = soma / len(numeros)
+
+print("A média dos números é:", media)
+
+"""## Exercício 44: Crie uma lista de nomes e converta todos para maiúsculas."""
+
+nomes = ['wesley', 'isabel', 'anderson', 'débora']
+maiusculo = [palavra.upper() for palavra in nomes]
+print(maiusculo)
+
+# Essa linha de código está utilizando uma compreensão de lista
+#(list comprehension) para converter todas as palavras em uma lista nomes
+#para maiúsculas e armazená-las na lista maiúsculo
+
+"""## Exercício 45: Crie uma lista de números e remova os duplicados."""
+
+num = [1, 9, 2, 3, 4, 5, 3, 6, 7, 8, 10, 9, 10]
+dupli = list(set(num))
+
+print(dupli)
+
+# set(num)
+# Transforma a lista num em um conjunto (set).
+# Um conjunto não permite elementos duplicados.
+
+"""## Exercício 46: Crie um dicionário com nomes de alunos e suas notas e exiba a nota de um aluno específico."""
+
+alunos = {"Wesley": 9.5, "Isabel": 8.0, "Anderson": 7.2}
+
+nota = alunos["Wesley"]
+print(f"A nota do Wesley é: {nota}")
+
+"""## Exercício 47: Adicione um novo aluno e sua nota a um dicionário."""
+
+dicionario = {"Wesley": 9.5, "Isabel": 8.0, "Anderson": 7.2}
+
+entrada = input('Informe um novo aluno e sua nota (Ex: Lucas: 7.5): ').capitalize()
+
+nome, nota = entrada.split(":")
+nome = nome.strip()
+nota = float(nota.strip())
+
+dicionario[nome] = nota
+print(dicionario)
+
+#Divide a entrada em duas partes:
+# A função split(":") separa a string onde encontrar dois pontos:
+# "Lucas" → vai para a variável nome
+# " 7.5" → vai para a variável nota
+
+#Remove espaços em branco extras do nome:
+# nome = nome.strip()
+# Se o usuário digitar com espaços extras, como " Lucas ", o .strip() remove os espaços antes e depois:
+# " Lucas " → "Lucas"
+
+# Remove espaços da nota e converte para número:
+# nota = float(nota.strip())
+# Primeiro, nota.strip() transforma " 7.5" em "7.5".
+# Depois, float("7.5") transforma a string em número de ponto flutuante: 7.5.
+
+"""## Exercício 48: Remova um aluno do dicionário."""
+
+dicionario = {"Wesley": 9.5, "Isabel": 8.0, "Anderson": 7.2}
+
+for nome, nota in dicionario.items():
+    print(f"{nome} → {nota}")
+
+aluno = input("Digite o nome do aluno que deseja remover: ").capitalize()
+dicionario.pop(aluno, None)
+
+print(dicionario)
+
+"""## Exercício 49: Percorra um dicionário e imprima suas chaves e valores."""
+
+dicionario = {"Wesley": 9.5, "Isabel": 8.0, "Anderson": 7.2}
+
+for nome, nota in dicionario.items():
+    print(f"{nome} → {nota}")
+
+# for nome, nota in dicionario.items():
+# dicionario.items() retorna todos os pares chave-valor do dicionário.
+
+"""## Exercício 50: Verifique se uma chave existe no dicionário."""
+
+dicionario = {"Wesley": 9.5, "Isabel": 8.0, "Anderson": 7.2}
+
+aluno = input("Digite o nome do aluno que deseja verificar: ").capitalize()
+
+if aluno in dicionario:
+    print(f"O aluno {aluno} está no dicionário com nota {dicionario[aluno]}.")
+else:
+    print(f"O aluno {aluno} não foi encontrado.")
